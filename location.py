@@ -5,7 +5,10 @@ from modules import banner
 import os
 import sys
 import time
-import ipapi
+try:
+   import ipapi
+except ImportError:
+    os.system("pip3 install ipapi")
 init()
 noth = "\nPlease Enter IP!"
 url_loc = "\nEnter url: "
